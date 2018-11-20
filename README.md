@@ -6,5 +6,6 @@ ISD Final Project Documents
 -index.html is the html file for the main page
 -style.css is the css file for everything 
 -login.html is the html file for the login page
+-javascript.js is for the javascript that we will need to use to handle events (button clicks, etc)
 
 you can add your code directly to these files
