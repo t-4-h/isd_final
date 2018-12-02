@@ -13,6 +13,20 @@
 </head>
 
 <body>
+  
+  <div class="row">
+<div class="col-md-3 text-left" style="margin-top:15px;">    
+    <h1>LOGO</h1></div>
+   
+    
+  <div class="col-md-8 text-align">
+    <form method="POST" action="#" style="margin-top:15px;">
+    </font><input type="text" name="Tsearch" value="" size="30" >
+    <input class="btn btn-danger" type=submit value="search"><br><br>
+    </form></div>  
+    <div class="col-md-1 text-right" style="margin-top:15px;">    
+    <a href="#"><h5>account</h5></a></div>
+    </div>
 
 <div class = "container-fluid">
       <div class = "row row-height"><!--edit this to change column size-->
@@ -26,6 +40,20 @@
     </div>
     <div class = "col-md-4 mid"><!--edit this to change column size-->
       <h2><center> MICROSTEPS</center></h2> <br>
+      <table>
+      <tr><li><font class="btn btn-default" onclick="showtip(i)">Hello I am a microstep1</font></li>
+      <li><a href="javascript:;" class="add_btn btn-primary" >&nbsp;+&nbsp;</a></li>
+      </td></tr>
+          </table>
+  <script type="text/javascript">
+        $(function(){
+            $(".add_btn").click(function(){
+                $(".reply_textarea").remove();
+                $(this).parent().append("<div class='reply_textarea'><textarea name='' cols='40' rows='5'></textarea><br/><input type='submit' value='submit' /></div>");
+            });
+        });
+    </script>
+      
       Hello I am a microstep<br>
       Hello I am a microstep<br>
       Hello I am a microstep<br>
