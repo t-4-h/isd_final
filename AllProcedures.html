@@ -1,91 +1,409 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background: #494A5F;
-            font-weight: 500;
-            font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
-        }
-
-        #container {
-            width: 500px;
-            height: 820px;
-            margin: 0 auto;
-        }
-        div.search {padding: 30px 0;}
-
-        form {
-            position: relative;
-            width: 300px;
-            margin: 0 auto;
-        }
-
-        input, button {
-            border: none;
-            outline: none;
-        }
-
-        input {
-            width: 100%;
-            height: 42px;
-            padding-left: 13px;
-        }
-
-        button {
-            height: 42px;
-            width: 42px;
-            cursor: pointer;
-            position: absolute;
-        }
-
-        /*搜索框1*/
-        .bar1 {background: #A3D0C3;}
-        .bar1 input {
-            border: 2px solid #7BA7AB;
-            border-radius: 5px;
-            background: #F9F0DA;
-            color: #9E9C9C;
-        }
-        .bar1 button {
-            top: 0;
-            right: 0;
-            background: #7BA7AB;
-            border-radius: 0 5px 5px 0;
-        }
-        .bar1 button:before {
-            content: "\f002";
-            font-family: FontAwesome;
-            font-size: 16px;
-            color: #F9F0DA;
-        }
-
-        
-    </style>
+  <title>Main Procedures</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative; 
+      padding-top: 65px;
+      padding-bottom: 65px
+      
+  }
+  #navBarSearchForm input[type=text]{width:500px !important;}
+  </style>
 </head>
 <body>
-<div id="container">
-    <div class="search bar1">
-        <form>
-            <input type="text" placeholder="">
-            <button type="submit"></button>
-        </form>
+
+    
+<div class="row"></div>
+
+    
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" rel="home" href="homePage.html" title="All Procedures Homepage"><img style="max-width:100px;max-height: 40px; margin-top: -7px;"
+             src="surgeonLogo.png"></a>
     </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#addSurgeryModal" data-toggle="modal" data-target="#addSurgeryModal" class="nav-link"><span class="glyphicon glyphicon-plus"></span>Surgery</a></li>
+      <li><a href="FinalProjectIndex.html"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+    </ul>
 
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
 
+        <div class="col-sm-4 col-md-10 pull-right">
+        <form class="navbar-form" role="search" id="navBarSearchForm">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+        </div>
+        
+        
+
+    </div>
+</div>    
+    
+    
+    
+    <!-- Add Surgery pop up -->
+    <div class="modal fade" id="addSurgeryModal">
+    <div class="modal-dialog">
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <h5 class="modal-title">For your Queries</h5> 
+            </div>
+            <div class="modal-body">
+                IF you have any questions, Mess Manager Office number is <strong>+01234567890</strong> or you can email us by <strong>Ouremail@domain.com</strong>>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss = "modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
+    
+    
+ 
+    
+    
+<!--Navbar code-->
+<!--    
+<div class="col-md-4 text-left" style="margin-top:15px;">
+    <div class="col-sm-2"><form action="homePage.html">
+    <input type="image" src="surgeonLogo.png" alt="Submit">
+    </form></div>
+    </div>
+   
+    
+  <div class="col-md-5 text-align">
+    <form method="POST" action="#" style="margin-top:15px;">
+    <input type="text" name="Tsearch" value="" size="45" >
+    <input class="btn btn-info" type=submit value="search"><br><br>
+    </form>
+    </div>  
+    <div class="col-md-3 text-right" style="margin-top:5px;">    
+    <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a></div>
+    </div>  
+-->
+    
+<div class="container">
+<div class="row">
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  
+
+    <div class="col-md-2"></div>
+      <div class="collapse navbar-collapse col-md-8" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">a</a></li>
+          <li><a href="#section2">b</a></li>
+          <li><a href="#section3">c</a></li>
+          <li><a href="#section4">d</a></li>
+          <li><a href="#section5">e</a></li>
+          <li><a href="#section6">f</a></li>
+          <li><a href="#section7">g</a></li>
+          <li><a href="#section8">h</a></li>
+          <li><a href="#section9">i</a></li>
+          <li><a href="#section10">j</a></li>
+          <li><a href="#section11">k</a></li>
+          <li><a href="#section12">l</a></li>
+          <li><a href="#section13">m</a></li>
+          <li><a href="#section14">n</a></li>
+          <li><a href="#section15">o</a></li>
+          <li><a href="#section16">p</a></li>
+          <li><a href="#section17">q</a></li>
+          <li><a href="#section18">r</a></li>
+          <li><a href="#section19">s</a></li>
+          <li><a href="#section20">t</a></li>
+          <li><a href="#section21">u</a></li>
+          <li><a href="#section22">v</a></li>
+          <li><a href="#section23">w</a></li>
+          <li><a href="#section24">x</a></li>
+          <li><a href="#section25">y</a></li>
+          <li><a href="#section26">z</a></li>
+        </ul> 
+    </div>
+    </nav> 
+    </div>
+    
+</div>
+<div class="container">
+    <div class="row">
+ <div class="list-group" id="section1">    
+        <h1>A</h1>
+        <a href="index.html" class="list-group-item">Abdominoplasty (Tummy Tuck ( Abdominoplasty))</a>
+        <a href="#" class="list-group-item">Ablation Therapy for Arrhythmias</a>
+        <a href="#" class="list-group-item">Ablation, Endometrial (Endometrial Ablation)</a>
+        <a href="#" class="list-group-item">Ablation, Uterus (Endometrial Ablation)</a>
+        <a href="#" class="list-group-item">Abnormal Liver Enzymes (Liver Blood Tests)</a>
+        <a href="#" class="list-group-item">Absorbent Products Incontinence (Urinary Incontinence Products for Men)</a>
+          <a href="#" class="list-group-item">Abstinence Method of Birth Control (Natural Methods of Birth Control)</a>
+          <a href="#" class="list-group-item">Acupuncture</a>
+          <a href="#" class="list-group-item">Adenoidectomy Surgical Instructions</a>
+          <a href="#" class="list-group-item">Adenosine (Exercise Stress Test)</a>
+      </div>
+      <div class="list-group" id="section2"> 
+        <h1>B</h1>
+        <a href="#" class="list-group-item">Back Surgery (Minimally Invasive Lumbar Spinal Fusion)</a>
+           <a href="#" class="list-group-item">Baclofen Pump Therapy</a>
+           <a href="#" class="list-group-item">Bad Cholesterol Test (Cholesterol Test)</a>
+           <a href="#" class="list-group-item">Balloon Angioplasty Of Heart (Coronary Angioplasty)</a>
+           <a href="#" class="list-group-item">Balloon Valvuloplasty (Heart Valve Disease Treatment)</a>
+           <a href="#" class="list-group-item">Balloon Endoscopy</a>
+           <a href="#" class="list-group-item">Barium Enema</a>
+           <a href="#" class="list-group-item">Barium Swallow (Upper GI Series)</a>
+      </div>        
+      <div class="list-group" id="section3">         
+        <h1>C</h1>
+         <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item">C-Reactive Protein Test (CRP)</a>
+           <a href="#" class="list-group-item">C-Section (Cesarean Birth)</a>
+           <a href="#" class="list-group-item">CA 125</a>
+           <a href="#" class="list-group-item">CABG (Coronary Artery Bypass Graft)</a>
+           <a href="#" class="list-group-item">Calendar Rhythm Method of Birth Control (Natural Methods of Birth Control)</a>
+           <a href="index.html" class="list-group-item">CTAMUS</a>
+          
+      </div>
+      <div class = "list-group" id="section4">         
+        <h1>D</h1>
+         <a href="#" class="list-group-item">D & C (Dilation and Curettage)</a>
+           <a href="#" class="list-group-item">Decalcification (Heart Valve Disease Treatment)</a>
+           <a href="#" class="list-group-item">Deep Brain Stimulation</a>
+           <a href="#" class="list-group-item">Defibrillator (Implantable Cardiac Defibrillator)</a>
+           <a href="#" class="list-group-item">Delivery of a Baby (Labor and Delivery)</a>
+           <a href="#" class="list-group-item">Dental (Fillings)</a>
+          
+      </div>      
+      <div class = "list-group" id="section5">         
+        <h1>E</h1>
+         <a href="#" class="list-group-item">EA (Endometrial Ablation)</a>
+           <a href="#" class="list-group-item">Ear Tubes</a>
+           <a href="#" class="list-group-item">Ear, Cosmetic Surgery (Otoplasty)</a>
+           <a href="#" class="list-group-item">ECG (Electrocardiogram (ECG or EKG))</a>
+           <a href="#" class="list-group-item">Echo (Echocardiogram)</a>
+           <a href="#" class="list-group-item">Echocardiogram</a>
+          
+      </div>
+        <div class = "list-group" id="section6">    
+        <h1>F</h1>
+         <a href="#" class="list-group-item">Face Lift</a>
+           <a href="#" class="list-group-item">Fallopian Tube Removal (Hysterectomy)</a>
+           <a href="#" class="list-group-item">FANA (Antinuclear Antibody)</a>
+           <a href="#" class="list-group-item">Fecal Occult Blood Tests</a>
+           <a href="#" class="list-group-item">Female Condom (Barrier Methods of Birth Control)</a>
+      </div>
+      <div class = "list-group" id="section7"> 
+        <h1>G</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>        
+      <div class = "list-group" id="section8">         
+        <h1>H</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section9">         
+        <h1>I</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>      
+      <div class = "list-group" id="section10">         
+        <h1>J</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+        <div class = "list-group" id="section11">    
+        <h1>K</h1>
+         <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section12"> 
+        <h1>L</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>        
+      <div class = "list-group" id="section13">         
+        <h1>M</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section14">         
+        <h1>N</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>      
+      <div class = "list-group" id="section15">         
+        <h1>O</h1>
+         <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+        <div class = "list-group" id="section16">    
+        <h1>P</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section17"> 
+        <h1>Q</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>        
+      <div class = "list-group" id="section18">         
+        <h1>R</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section19">         
+        <h1>S</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>      
+      <div  class = "list-group" id="section20">         
+        <h1>T</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+        <div class = "list-group" id="section21">    
+        <h1>U</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section22"> 
+        <h1>V</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>        
+      <div class = "list-group" id="section23">         
+        <h1>W</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+      <div class = "list-group" id="section24">         
+        <h1>X</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>      
+      <div class = "list-group" id="section25">         
+        <h1>Y</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+        <div class="list-group" id="section26">    
+        <h1>Z</h1>
+          <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+           <a href="#" class="list-group-item"></a>
+      </div>
+    
+    </div>   
+</div>
+
+    
+    
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
 </body>
 </html>
