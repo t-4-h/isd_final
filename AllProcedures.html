@@ -1,91 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    
+    <!-- css-->
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background: #494A5F;
-            font-weight: 500;
-            font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
-        }
-
-        #container {
-            width: 500px;
-            height: 820px;
-            margin: 0 auto;
-        }
-        div.search {padding: 30px 0;}
-
-        form {
-            position: relative;
-            width: 300px;
-            margin: 0 auto;
-        }
-
-        input, button {
-            border: none;
-            outline: none;
-        }
-
-        input {
-            width: 100%;
-            height: 42px;
-            padding-left: 13px;
-        }
-
-        button {
-            height: 42px;
-            width: 42px;
-            cursor: pointer;
-            position: absolute;
-        }
-
-        /*搜索框1*/
-        .bar1 {background: #A3D0C3;}
-        .bar1 input {
-            border: 2px solid #7BA7AB;
-            border-radius: 5px;
-            background: #F9F0DA;
-            color: #9E9C9C;
-        }
-        .bar1 button {
-            top: 0;
-            right: 0;
-            background: #7BA7AB;
-            border-radius: 0 5px 5px 0;
-        }
-        .bar1 button:before {
-            content: "\f002";
-            font-family: FontAwesome;
-            font-size: 16px;
-            color: #F9F0DA;
-        }
-
-        
+    
     </style>
+    
+    
+    <!-- JavaScript -->
+    <script>
+    
+    
+    
+    </script>
+    
+    
+    
+    
+    
 </head>
 <body>
-<div id="container">
-    <div class="search bar1">
-        <form>
-            <input type="text" placeholder="">
-            <button type="submit"></button>
-        </form>
+
+<div class="container">
+    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <i class="fas fa-search h4 text-body"></i>
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search Procedures">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-lg-2 " >
+                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+                        </div>
+                        <!--end of col-->
+                    </div>
+  <div class="row">
+    <div class="col-sm-1">
+      
+        
     </div>
-
-
+    <div class="col-md-10">
+        <div class="row"> </div>
+        <h1 align="center"> All Procedures <br/></h1>
+        
+          <div class="btn-toolbar" >
+          <div class="btn-group btn-group-sm">
+          <button class="btn btn-default">A</button>
+          <button class="btn btn-default">B</button>
+          <button class="btn btn-default">C</button>
+          <button class="btn btn-default">D</button>
+          <button class="btn btn-default">E</button>
+          <button class="btn btn-default">F</button>
+          <button class="btn btn-default">G</button>
+          <button class="btn btn-default">H</button>
+          <button class="btn btn-default">I</button>
+          <button class="btn btn-default">J</button>
+          <button class="btn btn-default">K</button>
+          <button class="btn btn-default">L</button>
+          <button class="btn btn-default">M</button>
+          <button class="btn btn-default">N</button>
+          <button class="btn btn-default">O</button>
+          <button class="btn btn-default">P</button>
+          <button class="btn btn-default">Q</button>
+          <button class="btn btn-default">R</button>
+          <button class="btn btn-default">S</button>
+          <button class="btn btn-default">T</button>
+          <button class="btn btn-default">U</button>
+          <button class="btn btn-default">V</button>
+          <button class="btn btn-default">W</button>
+          <button class="btn btn-default">X</button>
+          <button class="btn btn-default">Y</button>
+          <button class="btn btn-default">Z</button>
+          </div>
+          </div>
+        
+        
+        
+    </div>
+      
+     <div class="col-sm-1">
+      
+        
+    </div>
+    
+  </div>
 </div>
+
 </body>
 </html>
