@@ -9,3 +9,7 @@ ISD Final Project Documents
 -javascript.js is for the javascript that we will need to use to handle events (button clicks, etc)<br><br>
 
 you can add your code directly to these files
+
+-isd.sql is our database <br>
+-login.php is for connect the database with login.html <br>
+-register.php is for connect the database with register.html <br>
