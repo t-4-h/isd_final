@@ -1,16 +1,21 @@
 <?php
 $host="localhost"; // Host name 
-$username=""; // Mysql username 
-$password=""; // Mysql password 
+$username="root"; // Mysql username 
+$password="root"; // Mysql password 
 $db_name="isd"; // Database name 
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
+//mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+$conn=mysqli_connect("localhost:8889","root","root","isd");
+    if($conn->connect_error){
+        echo"$conn->connect_error";
+    }else{
+       // echo"ok";    
+    }
 
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
+//mysql_select_db("$db_name")or die("cannot select DB");
+
+
 $error_messages = array();
 if(isset($_POST['login-submit']))
 {
@@ -27,25 +32,23 @@ if(isset($_POST['login-submit']))
 
     
     $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $statement = $db->prepare("SELECT * FROM user WHERE username=? AND password=?");
-    $statement->bind_param("ss", $username, $password );
-    $statement->execute();
-    $result = $statement->get_result();
-    if($result->num_rows <= 0)
-    {
-        array_push($error_messages, "Login Failed");
-        $statement->close();
-    }
-    else{
-        $_SESSION['logged_in'] = true;
-        $_SESSION['username'] = $username;
-        $_SESSION['user_info'] = $result->fetch_assoc();
-        $statement->close();
-        header('location: AllProcedures.html');
-        die();
-    }
+    $password = $_POST['password'];    
+    $sql = "SELECT * FROM user WHERE username = '$username' and password = '$password'";
+      $result = $conn->query($sql);
+     // echo 11;
+    if($result==null)
+        echo "failed";
     
-}
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+       //  session_register("username");
+         $_SESSION['login_user'] = $username;
+         header("location: AllProcedures.html");
+      }else {         
+         header("location: login.html");
+      }
+   }
 ?>
