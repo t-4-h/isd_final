@@ -11,5 +11,5 @@ ISD Final Project Documents
 you can add your code directly to these files
 
 -isd.sql is our database <br>
--login.php is for connect the database with login.html <br>
--register.php is for connect the database with register.html <br>
+-login.php is for connecting the database with login.html <br>
+-register.php is for connecting the database with register.html <br>
