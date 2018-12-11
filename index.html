@@ -31,6 +31,12 @@
   height:100%;
 }
 
+    .medium{
+        position: fixed;
+        bottom: 40px;
+        left:50px;
+    }
+    
 @media (min-width: 768px){
   
   right {
@@ -58,8 +64,6 @@
 
 #right {
   height:700px;
-  background-color: gray;
-    color: aliceblue;
   text-align: center;
   overflow-y: scroll;
     
@@ -131,36 +135,45 @@ h4{
   
 <!--Navigation Bar ends -->
     
-    
+    <div class="container">
 <!-- 3 Column Body -->
+        <div class="row">
+            <div class="col-lg-6">
    <div class="container-fluid">
   <div class="row">
-    <nav class="col-md-3" id="myScrollspy">
-      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
-          <h2>Main Steps</h2>
-        <center><li><h3><a href="#section1">Main Step 1</a></li>
-        <li><h3><a href="#section2">Main Step 2</a></li>
-        <li><h3><a href="#section3">Main Step 3</a></li>
-          <li><h3><a href="#section4">Main Step 4</a></li>
-        <li><h3><a href="#section5">Main Step 5</a></li>
-        <li><h3><a href="#section6">Main Step 6</a></li>
-          <li><h3><a href="#section7">Main Step 7</a></li>
-        <li><h3><a href="#section8">Main Step 8</a></li>
-        <li><h3><a href="#section9">Main Step 9</a></li>
-          <li><h3><a href="#section10">Main Step 10</a></li>
-        <li><h3><a href="#section11">Main Step 11</a></li>
-          <li><h3><a href="#section3">Main Step 12</a></li></center>
+    <nav class="col-md-6" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205" data-off>
+          <li><a><h1>Main Steps</h1></a></li>
+        <li><a href="#section1">Insert Foley, drain bladder</a></li>
+        <li><a href="#section2">Mark retropubic exit sites</a></li>
+        <li><a href="#section3">Injection of local anesthetic into retropubic/suprapubic trocar track spaces bilaterally</a></li>
+          <li><a href="#section4">Inject local for paraurethral dissection</a></li>
+        <li><a href="#section5">Make incision overlying midurethra – through full thickness of vaginal epithelium and underlying fibromuscular layer			</a></li>
+        <li><a href="#section6">Paraurethral lateral dissection, to create tunnels for trocar</a></li>
+          <li><a href="#section7">Widen paraurethral dissection</a></li>
+        <li><a href="#section8">Prepare Sling - Fixed Laxity</a></li>
+        <li><a href="#section9">Assemble reusable handle to trocar and sling</a></li>
+          <li><a href="#section10">Adjust the table height</a></li>
+        <li><a href="#section11">Identify the angle for placing trocar</a></li>
+        <li><a href="#section12">Drain bladder</a></li>
+           <li><a href="#section13"></a>Place catheter guide</li>
+           <li><a href="#section14"></a>Catheter guide centered by assistant</li>
+           <li><a href="#section15"></a>Trainee places trocar into the paraurethral tunnel</li>
+           <li><a href="#section16"></a>Prepare for trocar passage</li>
+           <li><a href="#section17"></a>Slide behind pubic bone</li>
+           <li><a href="#section18"></a>Advance trocar ventrally</li>
+           <li><a href="#section19"></a>Pop through the rectus</li>
         
       </ul>
     </nav>
-    <div class="col-md-3">
+    <div class="col-md-6">
         
       <div class="list-group" id="section1"> 
-          <h2>Microstep for Step1</h2>
-          <center>
+          <h1>Microstep for Step1</h1>
+        
           <a href="" class="list-group-item" ><h3>Micro Step1</h3></a>
           <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
-            <!-- Modal -->
+          <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
 
@@ -195,7 +208,7 @@ h4{
       </div>
         
         <div class="list-group" id="section2">  
-             <h2>Microstep for Step2</h2><center>
+             <h1>Microstep for Step2</h1>
          <a href="index.html" class="list-group-item" ><h3>Micro Step1</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
@@ -203,7 +216,7 @@ h4{
           <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
       </div>
         <div class="list-group" id="section3"> 
-             <h2>Microstep for Step3</h2><center>
+             <h1>Microstep for Step3</h1>
          <a href="index.html" class="list-group-item" ><h3>Micro Step1</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
@@ -216,7 +229,7 @@ h4{
           <a href="index.html" class="list-group-item" ><h3>Micro Step 10</h3></a>
       </div>
         <div class="list-group" id="section4">  
-             <h2>Microstep for Step4</h2><center>
+             <h1>Microstep for Step4</h1>
         <a href="index.html" class="list-group-item" ><h3>Micro Step1</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
@@ -224,72 +237,50 @@ h4{
           <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
       </div>
         <div class="list-group" id="section5"> 
-             <h2>Microstep for Step5</h2><center>
+             <h1>Microstep for Step5</h1>
          <a href="index.html" class="list-group-item" ><h3>Micro Step1</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
       </div>
-        <div class="list-group" id="section6"><h2>Microstep for Step6</h2><center><center>
+        <div class="list-group" id="section6">    
         <a href="index.html" class="list-group-item" ><h3>Micro Step1</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
           <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
       </div>
-        <div class="list-group" id="section7">
-          <h2>Microstep for Step7</h2><center>
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
+        <div class="list-group" id="section7">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 7</h3></a>
       </div>
-        <div class="list-group" id="section8">
-<h2>Microstep for Step8</h2><center>  
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
-            <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
+        <div class="list-group" id="section8">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 8</h3></a>
       </div>
-        <div class="list-group" id="section9"><h2>Microstep for Step9</h2><center>     
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
-            <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
+        <div class="list-group" id="section9">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 9</h3></a>
       </div>
-        <div class="list-group" id="section10"> <h2>Microstep for Step10</h2>   <center>  
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
-            <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
+        <div class="list-group" id="section10">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 10</h3></a>
       </div>
-        <div class="list-group" id="section11">  <h2>Microstep for Step11</h2> <center>  
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
-            <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
+        <div class="list-group" id="section11">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 11</h3></a>
       </div>
-        <div class="list-group" id="section12"><h2>Microstep for Step12</h2><center>  
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
-            <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
+        <div class="list-group" id="section12">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 12</h3></a>
       </div>
-        <div class="list-group" id="section13">  <h2>Microstep for Step13</h2>  <center>  
-        <a href="index.html" class="list-group-item" ><h3>Micro Step 1</h3></a>
-            <a href="index.html" class="list-group-item" ><h3>Micro Step 2</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 3</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 4</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Micro Step 5</h3></a>
+        <div class="list-group" id="section13">    
+        <a href="index.html" class="list-group-item" ><h3>Micro Step 13</h3></a>
       </div>
-     </center>   
+        
     </div>
-      
-      
-      <div class="hidden-xs col-md-6" id="right">
+      </div>
+      </div>
+      </div>
+            
+            
+        <div class="col-lg-6">       
+      <div class="col-lg-12 medium" id="right">
           <h1>Tips</h1>
            <div id="section1.1">    
         <h1>Section 1</h1>
@@ -412,11 +403,11 @@ h4{
         <p>Try to scroll this section and look at the navigation list while scrolling!</p>
       </div>
     </div>
-      
-  </div>
+      </div> 
+  
 </div>
 
-
+</div>
     
 <!--<div class="container-fluid" id="no">
 <div class="row" id="title">
