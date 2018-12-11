@@ -10,7 +10,11 @@
     
     
 <style CSS>
-    
+      ul.nav-pills {
+      top: 20px;
+      position: fixed;
+      width:200px;
+  }
     no {
     padding-top: 100px;
   }
@@ -19,9 +23,9 @@
         padding-left: 50px;
     }
     body{
-        position:relative;
+        position:absolute;
          padding-top: 100px;
-        background-color: cornsilk;
+        background-color: aliceblue;
     }
     
   .app_page1 {
@@ -32,9 +36,14 @@
 }
     .medium{
         position: fixed;
+        background: #FF4500;
         bottom: 40px;
-        left:50px;
+        left:45%;
+        width: 50%;
     }
+    
+    
+    
     
 @media (min-width: 768px){
   
@@ -89,6 +98,33 @@ h4{
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    
+    
+    <!-- Modal for Adding Tips -->
+            <div class="modal fade" id="tipModal" role="dialog">
+            <div class="modal-dialog">
+
+
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add Tips</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                      <label for="comment">Add your Teaching Tip here:</label>
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success"  type="submit" >Submit for Review</button>
+                  <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        
 
 
 <!-- Navigation Bar-->
@@ -101,11 +137,11 @@ h4{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" rel="home" href="AllProcedures.html" title="All Procedures Homepage"><img style="max-width:100px;max-height: 40px; margin-top: -7px;"
+        <a class="navbar-brand" rel="home" href="homePage.html" title="All Procedures Homepage"><img style="max-width:100px;max-height: 40px; margin-top: -7px;"
              src="surgeonLogo.png"></a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      <li><a href="FinalProjectIndex.html"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
     </ul>
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -134,53 +170,34 @@ h4{
             <div class="col-lg-6">
    <div class="container-fluid">
   <div class="row">
-    <nav class="col-md-6" id="myScrollspy">
+    <nav class="col-md-6 mainStep" id="myScrollspy">
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205" data-off>
           <li><a><h1>Main Steps</h1></a></li>
         <li><a href="#section1">Insert Foley, drain bladder</a></li>
         <li><a href="#section2">Mark retropubic exit sites</a></li>
         <li><a href="#section3">Injection of local anesthetic into retropubic/suprapubic trocar track spaces bilaterally</a></li>
-        <li><a href="#section4">Grasp vaginal epithelium overlying midurethra</a></li>
-          <li><a href="#section5">Inject local for paraurethral dissection</a></li>
-        <li><a href="#section6">Make incision overlying midurethra – through full thickness of vaginal epithelium and underlying fibromuscular layer			</a></li>
-        <li><a href="#section7">Paraurethral lateral dissection, to create tunnels for trocar</a></li>
-          <li><a href="#section8">Widen paraurethral dissection</a></li>
-        <li><a href="#section9">Prepare Sling - Fixed Laxity</a></li>
-        <li><a href="#section10">Assemble reusable handle to trocar and sling</a></li>
-          <li><a href="#section11">Adjust the table height</a></li>
-        <li><a href="#section12">Identify the angle for placing trocar</a></li>
-        <li><a href="#section13">Drain bladder</a></li>
-           <li><a href="#section14"></a>Place catheter guide</li>
-           <li><a href="#section15"></a>Catheter guide centered by assistant</li>
-           <li><a href="#section16"></a>Hold Trocar</li>
-           <li><a href="#section17"></a>Trainee places trocar into the paraurethral tunnel</li>
-           <li><a href="#section18"></a>Prepare for trocar passage</li>
-           <li><a href="#section19"></a>Slide behind pubic bone</li>
-           <li><a href="#section20"></a>Advance trocar ventrally</li>
-           <li><a href="#section21"></a>Pop through the rectus</li>
-           <li><a href="#section22"></a>Advance trocar through skin</li>
-           
-           <li><a href="#section23"></a>Repeat on contralateral side</li>
-           <li><a href="#section24"></a>Remove catheter guide and foley catheter</li>
-
-           <li><a href="#section25"></a>Survey of bladder and urtherar</li>
-           <li><a href="#section26"></a>Drain bladder</li>
-           <li><a href="#section27"></a>Pull up on suprapubic mesh arms until mesh is snug against Kelly clamp</li>
-           <li><a href="#section28"></a>Place Kelly between mesh and urethra</li>
-           <li><a href="#section29"></a>Pull up on suprapubic mesh arms until mesh is snug against Kelly clamp</li>
-           <li><a href="#section30"></a>Final tensioning</li>
-           <li><a href="#section31"></a>Remove Kelly clamp from wound</li>
-           <li><a href="#section32"></a>Remove sleeves from mesh arms/li>
-           <li><a href="#section33"></a>Confirm final tensioning</li>
-           <li><a href="#section34">Confirm midurethral placement</a></li>
-           <li><a href="#section35">Trim mesh arms</a></li>
-
+          <li><a href="#section4">Inject local for paraurethral dissection</a></li>
+        <li><a href="#section5">Make incision overlying midurethra – through full thickness of vaginal epithelium and underlying fibromuscular layer			</a></li>
+        <li><a href="#section6">Paraurethral lateral dissection, to create tunnels for trocar</a></li>
+          <li><a href="#section7">Widen paraurethral dissection</a></li>
+        <li><a href="#section8">Prepare Sling - Fixed Laxity</a></li>
+        <li><a href="#section9">Assemble reusable handle to trocar and sling</a></li>
+          <li><a href="#section10">Adjust the table height</a></li>
+        <li><a href="#section11">Identify the angle for placing trocar</a></li>
+        <li><a href="#section12">Drain bladder</a></li>
+           <li><a href="#section13"></a>Place catheter guide</li>
+           <li><a href="#section14"></a>Catheter guide centered by assistant</li>
+           <li><a href="#section15"></a>Trainee places trocar into the paraurethral tunnel</li>
+           <li><a href="#section16"></a>Prepare for trocar passage</li>
+           <li><a href="#section17"></a>Slide behind pubic bone</li>
+           <li><a href="#section18"></a>Advance trocar ventrally</li>
+           <li><a href="#section19"></a>Pop through the rectus</li>
         
       </ul>
     </nav>
     <div class="col-md-6">
         
-      <div class="list-group" id="section1"> 
+       <div class="list-group" id="section1"> 
           <h1>Microstep for Step1</h1>
         
           <a href="" class="list-group-item" ><h3>Identify the urethra</h3></a>
@@ -211,79 +228,136 @@ h4{
               </div>
 
             </div>
+            
+            
+            
+            
+            
+            
+            
+            
           </div>
           <a href="#section1.1" class="list-group-item" ><h3>Separate labia to visualize structure between clitoris and vagina</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="#section4.1" class="list-group-item" ><h3>Place closed ended portion of Foley cather through urethra into bladder</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Use 10 cc syringe of saline to fill Foley balloon</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Hold Foley to make sure in far enough</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>At the same time, hold valve to make sure you  stabilize</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Visualize urine emptying  through catheter</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Urine drainage stopes when bladder is drained</h3></a>
+             <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
       </div>
         
         <div class="list-group" id="section2">  
              <h1>Microstep for Step2</h1>
          <a href="index.html" class="list-group-item" ><h3>Identify location to make marks for exit sites</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Identify pubic bone and retropubic space</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Identify midline</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Using a marker place dot or line to identify retropubic exit sites</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Using a marker place dot or line to identify retropubic exit sites</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Make bilateral stab incision on marked sites</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
 
       </div>
         <div class="list-group" id="section3"> 
              <h1>Microstep for Step3</h1>
          <a href="index.html" class="list-group-item" ><h3>Confirm type of local anestetic in 10 cc syringe with spinal needle</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Identify pubic bone</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Feel with fingers to confirm spot right behind pubic bone  (see Image 1)</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Inject local into mapped trocar tracks</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Place needle at 105 degree angle from skin into exit site and advance to hub of needle</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Draw back with syringe to confirm placement is not within a vessel</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Repeat on contralateral side</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Confirm amount injected with scrub tech</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
         <div class="list-group" id="section4">  
              <h1>Microstep for Step4</h1>
         <a href="index.html" class="list-group-item" ><h3>Adjust height of bed</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Identify urethral meatus</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Retract vagina</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Visualize urethra</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Identify midline</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Place Allis clamps on vaginal epithelium in midline</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Place Allis clamp 1 cm proximal to urethrla meatus at midline</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Place a second Allis clamp 2 cm cephalad to first Allis clamp at midline</h3></a>
-          <a href="index.html" class="list-group-item" ><h3>Check location of Foley ballon and bladder neck in comparison to grasped vaginal epithelium</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
+          <a href="index.html" class="list-group-item" ><h3>Check location of Foley ballon and bladder neck in comparison to grasped vaginal epithelium</h3>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a></a>
       </div>
         <div class="list-group" id="section5"> 
              <h1>Microstep for Step5</h1>
          <a href="index.html" class="list-group-item" ><h3>Inject local midline between Allis clamps</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Place needle tip perpendicularly</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Full thickness injection 1-4 cc of local</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Full thickness inject along paraurethral  dissection to inferior pubic ramus</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Angle needle 45 degrees laterally and 45 degrees vertically (downward) from perpendicular placement at midline</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Advance needle toward inferior pubic ramus to hub of needle</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Aspirate prior to injecting</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Inject 2-10cc while pulling back/withdrawing needle to distribute local along track for dissection</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Repeat on contralateral side</h3></a>
+              <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
       </div>
         <div class="list-group" id="section6"> 
             <h1>Microstep for Step6</h1>   
         <a href="index.html" class="list-group-item" ><h3>Incise over midurethra</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Maintain tension on both Allis clamps to make tissue easier to cut</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Cut with bovie (on cut) through full thickness vaginal epithelium and fibromuscular layer in vertical fashion between two Allis clamps</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           <a href="index.html" class="list-group-item" ><h3>Ensure cut is full thickness</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
 
           
       </div>
         <div class="list-group" id="section7">  
           <h1>Microstep for Step7</h1>     
         <a href="index.html" class="list-group-item" ><h3>Place Allis clamp on ipsilateral edge of incision for tunnel dissection</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>create tunnel for trocar paraurethrally</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Use metzenbaum scissors to create paraurethral tunnel</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>either sliding closed, snipping/spreading or small snips w/ countertraction and elevation of underlying tissue by assistant</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Place finger behind Alllis and vaginal tissue to feel scissor while dissecting and creating tunnel  --- also to help you avoid button hole (vaginal tissue injury)</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Tap scissors on bone to ensure tunnel is complete</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
 
 
 
@@ -292,124 +366,179 @@ h4{
          
         <h1>Microstep for Step8</h1>     
         <a href="index.html" class="list-group-item" ><h3>Withdrawal scissor while spreading slightly to make a wider tunnel </h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>once inferior ramus tapped, open scissors approximately 15-30 degrees</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>withdraw scissor at same angle dissection was performed (See Image 2)</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         
 
       </div>
         <div class="list-group" id="section9">  
         <h1>Microstep for Step9</h1>     
         <a href="index.html" class="list-group-item" ><h3>Make sure two sides of sheath are overlapping </h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Place clamp 5mm deep to midpoint line of sling overlying plastic to secure (may clamp at midpoint for identification without clamping deep to fix laxity)</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         
         
       </div>
         <div class="list-group" id="section10">   
         <h1>Microstep for Step10</h1>     
-        <a href="index.html" class="list-group-item" ><h3>Insert T shaped handle with centeral screw into trocar</h3></a>  
+        <a href="index.html" class="list-group-item" ><h3>Insert T shaped handle with centeral screw into trocar</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Turn the screw clockwise so that it captures and locks trocar in place</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Demonstrate how changing the angle of the handle changes the direction of the trocar tip more markedly</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         
       </div>
         <div class="list-group" id="section11"> 
         <h1>Microstep for Step11</h1>     
         <a href="index.html" class="list-group-item" ><h3>Move bed to the operating waist level (facilitating balance between seeing the tunnel and ergonomically passing the trocar)</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         
       </div>
         <div class="list-group" id="section12">  
         <h1>Microstep for Step12</h1>  
         <a href="index.html" class="list-group-item" ><h3>Identify angle for placing trocar by having anesthetist identify ipsilateral shoulder</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Confirm urethra, retropubic marking (target) and ipsilateral shoulder are in a line</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         
       </div>
         <div class="list-group" id="section13">   
         <h1>Microstep for Step13</h1> 
         <a href="index.html" class="list-group-item" ><h3>Remove Kelly clamp from Foley</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Allow Foley catheter to hang to gravity</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
         <div class="list-group" id="section14">   
         <h1>Microstep for Step14</h1> 
         <a href="index.html" class="list-group-item" ><h3>Place lubrication on tip of guide prior to placement in Foley catheter</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Pull Foley balloon to distal bladder to minimize risk of bladder perforation</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Place catheter guide in Foley cath advancing until hook is just proximal to Foley outlet</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Close hook just proximal to Foley outlet</h3></a>
+            <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section15">   
         <h1>Microstep for Step15</h1> 
         <a href="index.html" class="list-group-item" ><h3>Catheter guide centered by assistant</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section16">   
         <h1>Microstep for Step16</h1> 
         <a href="index.html" class="list-group-item" ><h3>Place handle in dominant palm with fingers curled around T portion of handle with relaxed grip and shaft between 3rd and 4th digits</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Nondominant hand grasps shaft with thumb and 2nd digit closer to tip than handle </h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section17">   
         <h1>Microstep for Step17</h1> 
         <a href="index.html" class="list-group-item" ><h3>Use nondominant hand/finger on ipsilateral Allis to guide insertion of trocar to avoid vaginal perforation</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Confirm grip on handle of trocar</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>See C8</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Elevate vaginal epithelium with an Allis</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Advance trocar through tunnel until bone (inferior ramus) felt at the tip of trocar</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Let go of Allis with nondominant hand and grasp trocar approximately 5 cm fromtip with thumb and two fingers in an underhanded fashion</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section18">   
         <h1>Microstep for Step18</h1> 
         <a href="index.html" class="list-group-item" ><h3>Move catheter guide handle to ipsilateral side for sling placement</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Look at ipsilateral shoulder of patient</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section19">   
         <h1>Microstep for Step19</h1> 
         <a href="index.html" class="list-group-item" ><h3>Slide trocar dorsal to bone</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Slide trocar cephalad to bone</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Trocar hugging bone</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Drop handle while advancing trocar</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Pop through arcus</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Variable timing when popping through arcus</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section20">   
         <h1>Microstep for Step20</h1> 
         <a href="index.html" class="list-group-item" ><h3>Drop trocar handle even more (dominant hand)</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Hugging bone</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Do not run into pubic bone</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Advance trocar ventrally with nondominant hand</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>With each advancement continue to hug the pubic bone</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
    
           
       </div>
       <div class="list-group" id="section21">   
         <h1>Microstep for Step21</h1> 
         <a href="index.html" class="list-group-item" ><h3>Drop (bring downward) handle towards ground</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Advance ventrally</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Pop through rectus fascia</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section22">   
         <h1>Microstep for Step22</h1> 
         <a href="index.html" class="list-group-item" ><h3>Pass ventrally through subcutaneous tissue</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Feel loss of resistance</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Advance trocar to skin</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Visualize skin tenting</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Ensure aim is at/near marks on skin (within skin incision if made prior)</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Take non-dominant hand off of stem of trocar</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Use non-dominant hand/fingers to apply pressure to skin surrounding trocar tip</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Push trocar ventrally through skin incision</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Advancing through skin will require more force</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Check vagina for perforation</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Remove handle from trocar</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       
       <div class="list-group" id="section23">   
         <h1>Microstep for Step23</h1> 
         <a href="index.html" class="list-group-item" ><h3>Repeat step C2 - assembly of handle to trocar</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Repeat steps C9 through C14</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section24">   
@@ -420,10 +549,15 @@ h4{
       <div class="list-group" id="section25">   
         <h1>Microstep for Step25</h1> 
         <a href="index.html" class="list-group-item" ><h3>Confirm adequate distension of bladder</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Perform full survey</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Assistant moves each trocar gently</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Survey along trocar path</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>confirm no trocar perforations</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section26">   
@@ -437,13 +571,16 @@ h4{
       <div class="list-group" id="section28">   
         <h1>Microstep for Step28</h1> 
         <a href="index.html" class="list-group-item" ><h3>Tip of Kelly within wound</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         
           
       </div>
       <div class="list-group" id="section29">   
         <h1>Microstep for Step29</h1> 
         <a href="index.html" class="list-group-item" ><h3>Use Allis clamps to separate wound and mesh </h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Irrigate and suction as needed</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section30">   
@@ -454,13 +591,17 @@ h4{
       <div class="list-group" id="section31">   
         <h1>Microstep for Step31</h1> 
         <a href="index.html" class="list-group-item" ><h3>Remove Kelly clamp from Foley</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Allow Foley catheter to hang to gravity</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section32">   
         <h1>Microstep for Step32</h1> 
         <a href="index.html" class="list-group-item" ><h3>Mesh should gently adhere to the urethra</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
         <a href="index.html" class="list-group-item" ><h3>Confirm no beveling</h3></a>
+          <a href="#" id="addBtn"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></span></a>
           
       </div>
       <div class="list-group" id="section33">   
@@ -477,7 +618,6 @@ h4{
         <h1>Microstep for Step35</h1> 
         
       </div>
-
         
     </div>
       </div>
@@ -485,79 +625,108 @@ h4{
       </div>
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         <div class="col-lg-6">       
       <div class="col-lg-12 medium" id="right">
-          <h1>Tips</h1>
-           <div id="tip1">    
+          <div id="tip1">    
         <h1>Identify the urethra</h1>
         <p>Upward Traction with hand retracting labia may help to visualize urethra</p>
+            <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip2"> 
         <h1>Separate labia to visualize structure between clitoris and vagina</h1>
         <p>See image A1b - Better to have hand positioned ventrally to be out of the way for the Foley insertion</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>        
       <div id="tip3">
         <h1>Use 10 cc syringe of saline to fill Foley balloon</h1>
         <p>Be sure balloon is beyond urethra</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip4">
         <h1>Identify pubic bone and retropubic space</h1>
         <p>Encourage junior surgeon to use fingers to curl around pubic bone to identify anatomy (pubic bone, retropubic space);</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>      
       <div id="tip5">
         <h1>Identify midline</h1>
         <p>Use clitoris to help identify midline</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
           <div id="tip6">    
         <h1>Using a marker place dot or line to identify retropubic exit sites</h1>
         <p>See Image A2b</p>
+               <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip7"> 
         <h1>Make bilateral stab incision on marked sites</h1>
         <p>Do not make stab incisions (may not always be midline)</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>        
       <div id="tip8">
         <h1>Inject local into mapped trocar tracks</h1>
         <p>Place needle just beneath skin to make wheal with 1-2 cc (parallel to skin) injecting local</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip9">
         <h1>Place needle at 105 degree angle from skin into exit site and advance to hub of needle</h1>
         <p>Confirm 105 degree angle</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
         <p>Intentially hit pubic bone with needle gently to confirm injection right behind it</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
           <div id="tip10">    
         <h1>Draw back with syringe to confirm placement is not within a vessel</h1>
         <p>Inject 3-4 cc with needle hubbed; others may inject evenly along entire track</p>
+               <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
         <p>Inject remaining 6 ccs of local while withdrawing needle; some prefer to inject even</p>
+               <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip11"> 
         <h1>Place Allis clamp 1 cm proximal to urethrla meatus at midline</h1>
         <p>Ensure a full 1 cm of vaginal tissue between edges of clamps; if too close, the dissection is more difficult which could lead to difficulty with trocars fitting in incision and ultimately getting extensions in vaginal mucosa</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>        
       <div id="tip12">
         <h1>Full thickness injection 1-4 cc of local</h1>
         <p>Make sure needle does not go too deep past plane of interest</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip13">
         <h1>Angle needle 45 degrees laterally and 45 degrees vertically (downward) from perpendicular placement at midline</h1>
         <p>Use retractors to expose area of injection; Adjust angle of junior surgeons hand to get appropriate placement of needle</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>      
       <div id="tip14">
         <h1>Advance needle toward inferior pubic ramus to hub of needle</h1>
         <p>Tap bone (inferior pubic ramus) with needle</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
           <div id="tip15">    
         <h1>Inject 2-10cc while pulling back/withdrawing needle to distribute local along track for dissection</h1>
         <p>Inject portion of local deep near bone, then remaining volume while withdrawing superficially</p>
+               <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip16"> 
         <h1>Inject 2-10cc while pulling back/withdrawing needle to distribute local along track for dissection</h1>
         <p>If too deep of incision, examine – if concern for urethral injury, consider immediate cystoscopy prior to proceeding</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>        
       <div id="tip17">
         <h1>Ensure cut is full thickness</h1>
         <p>Make a point to visualize white layer of fibromuscular tissue; not \"clearish bubble\" after full thickness injection</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
         <p>If bleeding, identify site and control with bovie cautery</p>
+           <a href="#modal2" id="addTip"><span class="glyphicon glyphicon-plus" data-toggle="modal" data-target="#tipModal"></span></a>
       </div>
       <div id="tip18">
         <h1>either sliding closed, snipping/spreading or small snips w/ countertraction and elevation of underlying tissue by assistant</h1>
@@ -687,80 +856,6 @@ h4{
 
 </div>
     
-<!--<div class="container-fluid" id="no">
-<div class="row" id="title">
-    </div>
-    <div class="app_page1">
-    <div class="row" id="steps">
-        <div class="col-sm-4" id="left">
-          <div class="list-group" id="section1">   
-            <h1> - </h1>
-        <h1>Micro Steps</h1>
-        <a href="index.html" class="list-group-item">Abdominoplasty (Tummy Tuck ( Abdominoplasty))</a>
-        <a href="#" class="list-group-item">Ablation Therapy for Arrhythmias</a>
-        <a href="#" class="list-group-item">Ablation, Endometrial (Endometrial Ablation)</a>
-        <a href="#" class="list-group-item">Ablation, Uterus (Endometrial Ablation)</a>
-        <a href="#" class="list-group-item">Abnormal Liver Enzymes (Liver Blood Tests)</a>
-        <a href="#" class="list-group-item">Absorbent Products Incontinence (Urinary Incontinence Products for Men)</a>
-          <a href="#" class="list-group-item">Abstinence Method of Birth Control (Natural Methods of Birth Control)</a>
-          <a href="#" class="list-group-item">Acupuncture</a>
-          <a href="#" class="list-group-item">Adenoidectomy Surgical Instructions</a>
-          <a href="#" class="list-group-item">Adenosine (Exercise Stress Test)</a>
-      </div>
-        </div>
-        <div class="col-sm-4" id="middle">
-            <h1> - </h1>
-          <h1>Micro Steps</h1>
-        <a href="index.html" class="list-group-item">Abdominoplasty (Tummy Tuck ( Abdominoplasty))</a>
-        <a href="#" class="list-group-item">Ablation Therapy for Arrhythmias</a>
-        <a href="#" class="list-group-item">Ablation, Endometrial (Endometrial Ablation)</a>
-        <a href="#" class="list-group-item">Ablation, Uterus (Endometrial Ablation)</a>
-        <a href="#" class="list-group-item">Abnormal Liver Enzymes (Liver Blood Tests)</a>
-        <a href="#" class="list-group-item">Absorbent Products Incontinence (Urinary Incontinence Products for Men)</a>
-          <a href="#" class="list-group-item">Abstinence Method of Birth Control (Natural Methods of Birth Control)</a>
-          <a href="#" class="list-group-item">Acupuncture</a>
-          <a href="#" class="list-group-item">Adenoidectomy Surgical Instructions</a>
-          <a href="#" class="list-group-item">Adenosine (Exercise Stress Test)</a>
-        </div>
-        <div class="col-sm-4" id="right">
-            <div class="tool-card">Slack - Be Less Busy
-            </div>
-            <div class="tool-card">Slack - Be Less Busy
-            </div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy</div>
-            <div class="tool-card">Slack - Be Less Busy
-            </div>
-            <div class="tool-card">Slack - Be Less Busy
-            </div>
-            <div class="tool-card">Slack - Be Less Busy
-            </div>
-            <div class="tool-card">
-              Slack - Be Less Busy
-            </div>
-            <div class="tool-card">
-              Slack - Be Less Busy
-            </div>
-            
-        </div>
-    </div>
-  </div>
-  
-</div>    
-    -->
 
 
 </body>
